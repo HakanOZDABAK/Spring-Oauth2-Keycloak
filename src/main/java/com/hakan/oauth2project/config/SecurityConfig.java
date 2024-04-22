@@ -16,7 +16,7 @@ public class SecurityConfig {
        return httpSecurity.cors(Customizer.withDefaults())
                 .csrf(csrf -> csrf.ignoringRequestMatchers("/api/home/**"))
                 .authorizeHttpRequests(httpRequest ->
-                {httpRequest.anyRequest().authenticated() })
+                {httpRequest.anyRequest().authenticated(); })
                 .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .oauth2ResourceServer(oauth2ResourceServer ->oauth2ResourceServer.jwt(Customizer.withDefaults()))
                 .build();
