@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 public class HomeRestController {
 
-
-
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public String home(){
