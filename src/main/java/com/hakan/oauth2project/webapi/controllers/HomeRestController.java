@@ -9,9 +9,14 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 public class HomeRestController {
 
-    @GetMapping
+    @GetMapping("/user")
     @ResponseStatus(HttpStatus.OK)
-    public String home(){
+    public String homeUser(){
+        return "Hello";
+    }
+    @GetMapping("/admin")
+    @ResponseStatus(HttpStatus.OK)
+    public String homeAdmin(){
         return "Hello";
     }
 }
